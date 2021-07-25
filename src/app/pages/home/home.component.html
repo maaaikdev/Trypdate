@@ -1,0 +1,41 @@
+<app-header></app-header>
+<section class="accommodation-list">
+    <div class="container">
+        <div class="row">
+			<div class="col-12">
+				<h2>Lugares Populares</h2>
+			</div>
+            <div class="col col-lg-4 card-item" *ngFor="let item of accommodation">
+                <div class="card">
+                  	<img src="{{item.images}}" alt="{{item.title}}" title="{{item.title}}" /> 
+					<div class="card-body">
+						<h3>{{item.title}}</h3>
+						<p>{{item.description}}</p>
+						<p class="location">San Francisco de Sales, Distrito capital (Colombia)</p>
+						<div class="d-flex justify-content-between align-items-center">
+							<p class="ms-auto price">desde <span><small>US$</small>{{item.price}}</span> /noche</p>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+		<div class="row">
+			<div class="col-12">
+				<h2>Mejores lugares en [Ciudad] </h2>
+			</div>
+            <div class="col col-lg-4 card-item" *ngFor="let item of accommodation">
+                <div class="card">
+                  	<img src="{{item.images}}" alt="{{item.title}}" title="{{item.title}}" /> 
+					<div class="card-body">
+						<h3>{{item.title}}</h3>
+						<p>{{item.description}}</p>
+						<p class="location">{{item.location}}</p>
+						<div class="d-flex justify-content-between align-items-center">
+							<p class="ms-auto price">desde <span><small>US$</small>{{item.price}}</span> /noche</p>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,140 @@
+
+<header>
+    <div class="bg-overlay"></div>
+    <div class="banner-travel">
+        <!-- <img class="d-block mx-auto mb-4" src="assets/images/header/traveller.jpg" alt="" width="72" height="57"> -->
+        <h1>Cada sitio cuenta una historia</h1>
+        <p>Màs de 23.000 alojamientos con encanto en la naturaleza listor para reservar</p>
+        <div class="form-travel">
+            <form class="d-flex form-search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <input  class="form-control me-2" placeholder="yyyy-mm-dd" name="dpFromDate" (click)="datepicker.toggle()">
+                <form class="form-inline">
+                    <div class="form-group hidden">
+                      <div class="input-group">
+                        <input name="datepicker"
+                               class="form-control"
+                               ngbDatepicker
+                               #datepicker="ngbDatepicker"
+                               [autoClose]="'outside'"
+                               (dateSelect)="onDateSelection($event)"
+                               [displayMonths]="2"
+                               [dayTemplate]="t"
+                               outsideDays="hidden"
+                               [startDate]="fromDate!"
+                               tabindex="-1">
+                        <ng-template #t let-date let-focused="focused">
+                          <span class="custom-day"
+                                [class.focused]="focused"
+                                [class.range]="isRange(date)"
+                                [class.faded]="isHovered(date) || isInside(date)"
+                                (mouseenter)="hoveredDate = date"
+                                (mouseleave)="hoveredDate = null">
+                            {{ date.day }}
+                          </span>
+                        </ng-template>
+                      </div>
+                    </div>
+                    <!-- <div class="form-group">
+                      <div class="input-group">
+                        <input #dpFromDate
+                               class="form-control" placeholder="yyyy-mm-dd"
+                               name="dpFromDate"
+                               [value]="formatter.format(fromDate)"
+                               (input)="fromDate = validateInput(fromDate, dpFromDate.value)">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
+                        </div>
+                      </div>
+                    </div> -->
+                    <!-- <div class="form-group ml-2">
+                      <div class="input-group">
+                        <input #dpToDate
+                               class="form-control" placeholder="yyyy-mm-dd"
+                               name="dpToDate"
+                               [value]="formatter.format(toDate)"
+                               (input)="toDate = validateInput(toDate, dpToDate.value)">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
+                        </div>
+                      </div>
+                    </div> -->
+                  </form>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle drop-passengers" type="button" title="Huespedes" (click)="openCounter()">
+                        2 huespedes
+                    </button>
+                </div>                 
+                <button class="btn btn-search-trip" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+                </form>
+            <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
+        </div>
+        <!-- Datapicker -->
+        <div class="datapicker-vacations">
+            <!-- <div class="form-group hidden">
+                <div class="input-group">
+                  <input name="datepicker"
+                         ngbDatepicker
+                         #datepicker="ngbDatepicker"
+                         [autoClose]="'outside'"
+                         (dateSelect)="onDateSelection($event)"
+                         [displayMonths]="2"
+                         [dayTemplate]="t"
+                         outsideDays="hidden"
+                         [startDate]="fromDate!"
+                         tabindex="-1">
+                </div>
+            </div> -->
+            <!-- <div class="input-group">
+                <input #dpToDate
+                       class="form-control" placeholder="yyyy-mm-dd"
+                       name="dpToDate"
+                       [value]="formatter.format(toDate)"
+                       (input)="toDate = validateInput(toDate, dpToDate.value)">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary calendar" (click)="datepicker.toggle()" type="button"></button>
+                </div>
+              </div> -->
+        </div>       
+        <!-- /Datapicker -->
+        <!-- Contador de huspedes -->
+        <div class="counter-passengers" id="handleCounter">
+                <div class="handle-counter">
+                    <div class="left">
+                        <p>Adultos:</p>
+                    </div>
+                    <div class="right">
+                        <button class="counter-minus btn btn-primary">-</button>
+                        <input type="text" value="3" class="number-pass">
+                        <button class="counter-plus btn btn-primary">+</button>
+                    </div>                        
+                </div>                   
+                <div class="handle-counter">
+                    <div class="left">
+                        <p>Niños:</p>
+                        <p><small>Entre 2 - 12 años</small></p>
+                    </div>
+                    <div class="right">
+                        <button class="counter-minus btn btn-primary">-</button>
+                        <input type="text" value="3" class="number-pass">
+                        <button class="counter-plus btn btn-primary">+</button>
+                    </div>                        
+                </div>
+                <div class="handle-counter">
+                    <div class="left">
+                        <p>Bebes:</p>
+                        <p><small>Menores de 2 años</small></p>
+                    </div>
+                    <div class="right">
+                        <button class="counter-minus btn btn-primary">-</button>
+                        <input type="text" value="3" class="number-pass">
+                        <button class="counter-plus btn btn-primary">+</button>
+                    </div>                        
+                </div>    
+            </div>
+        <!-- / Contador de huespedes -->
+    </div>
+</header>

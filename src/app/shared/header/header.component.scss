@@ -1,0 +1,204 @@
+
+@import '../../../styles.scss';
+
+header {
+    background-image: url('../../../assets/images/header/traveller.jpg');
+    background-size: cover;
+    height: 500px;
+    background-position-y: center;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .bg-overlay {
+        background-color: $secondary;
+        opacity: .45;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    .banner-travel {
+        text-align: center;
+        position: relative;
+        @media(max-width:768px){
+            padding: 24px;
+        }  
+        .form-search {
+            @media(max-width:768px){
+                display: flex;
+                flex-direction: column;
+            }
+            input {
+                &.form-control {
+                    @media(max-width:768px){
+                        margin: 6px auto!important;
+                    }
+                }
+            }
+        }
+        h1 {
+            font-size: 42px;
+            line-height: 50px;
+            font-weight: 700;
+            color: $white;
+        }
+        p {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 400;
+            color: $white;
+        }
+        .form-travel {
+            .dropdown {
+                .drop-passengers {
+                    background-color: $white;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    color: $gray-scale-2;
+                    border: 0;
+                    @media(max-width:768px){
+                        width: 100%;
+                        margin: 6px auto;
+                    }
+                }
+            }
+            .btn-search-trip {
+                background-color: $primary-1;
+                margin-left: 8px;
+                i {
+                    color: $white;
+                }
+                @media(max-width:768px){
+                    width: 100%;
+                    margin: 6px auto;
+                }
+            }            
+        }       
+        .counter-passengers {
+            width: 300px;
+            background-color: $white;
+            padding: 8px 24px;
+            border-radius: 8px;
+            position: absolute;
+            right: 48px;
+            top: 144px;
+            -webkit-box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.44); 
+            box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.44);
+            .handle-counter {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 16px auto;
+                .left {
+                    text-align: left;
+                    p {
+                        font-size: 14px;
+                        line-height: 18px;
+                        font-weight: 400;
+                        color: $gray-scale-1;
+                        margin-bottom: 0;
+                    }
+                }
+                .right {
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: auto;
+                    .counter-minus {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 0;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .number-pass {
+                        width: 50px;
+                        height: 32px;
+                        border-radius: 0;
+                        border: 0;
+                        text-align: center;
+                    }
+                    .counter-plus {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 0;
+                        display: flex;
+                        align-items: center;
+                    }
+                }  
+                
+            }
+        } 
+    }
+}
+// Datapicker
+.datapicker-vacations {
+    .form-group {
+        .input-group {
+            input {
+                display: none;
+            }
+        }
+    }
+    form {
+        .form-inline {
+            .form-group {
+                .input-group {
+                    .form-control {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+    display: none;
+}
+.input-group>.form-control:focus, .input-group>.form-select:focus {
+    display: none;
+}
+.input-group>.form-control, .input-group>.form-select {
+    display: none;
+}
+::ng-deep ng-template {
+    z-index: 1000;
+    padding: 24px 16px;
+}
+::ng-deep ngb-datepicker {
+    background-color: $white;
+    border: 0;
+    -webkit-box-shadow: 2px 2px 15px 0px rgb(0 0 0 / 44%);
+    box-shadow: 2px 2px 15px 0px rgb(0 0 0 / 44%);
+    padding: 24px 16px;
+    z-index: 100;
+}
+.custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+}
+.custom-day.focused {
+    background-color: #e6e6e6;
+}
+.custom-day.range, .custom-day:hover {
+    background-color: rgb(2, 117, 216);
+    color: white;
+}
+.custom-day.faded {
+    background-color: rgba(2, 117, 216, 0.5);
+}
+// Datapicker 
+.popover-markup .popover{
+    width:150%;
+  }
+  
+  .popover-markup label{
+    padding:0px;
+  }
