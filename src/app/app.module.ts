@@ -8,6 +8,11 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PropertiesListComponent } from './pages/properties-list/properties-list.component';
+import { CalendarComponent } from './shared/calendar/calendar.component';
+import { GuestsComponent } from './shared/guests/guests.component';
+import { LocationComponent } from './shared/location/location.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -15,12 +20,19 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent,    
+    HomeComponent,
+    PropertiesListComponent,
+    CalendarComponent,
+    GuestsComponent,
+    LocationComponent,    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
+    })
   ],
   exports: [],
   providers: [],

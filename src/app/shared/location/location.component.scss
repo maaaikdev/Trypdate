@@ -1,0 +1,19 @@
+@import '../../../styles.scss';
+::ng-deep app-location {
+    margin-right: 8px;
+    margin-bottom: initial;
+    @media(max-width:768px){
+        margin-right: initial;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    input {
+        &.form-control {
+            width: 200px;
+            height: 40px;
+            @media(max-width:768px){
+                width: 100%;
+            }
+        }
+    }
+}

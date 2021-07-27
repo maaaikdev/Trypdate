@@ -1,0 +1,77 @@
+@import '../../../styles.scss';
+::ng-deep app-guests {
+    @media(max-width:768px){
+        width: 100%;
+    }
+}
+.dropdown {    
+    .drop-passengers {
+        background-color: $white;
+        border: 1px solid $gray-scale-8;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: $gray-scale-2;
+        //border: 0;
+        height: 40px;
+        @media(max-width:768px){
+            width: 100%;
+            //margin: 6px auto;
+            margin-bottom: 16px;
+        }
+    }
+}
+.counter-passengers {
+    width: 300px;
+    background-color: $white;
+    padding: 8px 24px;
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    -webkit-box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.44); 
+    box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.44);
+    .handle-counter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 16px auto;
+        .left {
+            text-align: left;
+            p {
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+                color: $gray-scale-1;
+                margin-bottom: 0;
+            }
+        }
+        .right {
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            .counter-minus {
+                width: 32px;
+                height: 32px;
+                border-radius: 0;
+                display: flex;
+                align-items: center;
+            }
+            .number-pass {
+                width: 50px;
+                height: 32px;
+                border-radius: 0;
+                border: 0;
+                text-align: center;
+            }
+            .counter-plus {
+                width: 32px;
+                height: 32px;
+                border-radius: 0;
+                display: flex;
+                align-items: center;
+            }
+        }  
+        
+    }
+}

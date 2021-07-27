@@ -1,0 +1,80 @@
+
+@import '../../../styles.scss';
+// Datapicker
+::ng-deep app-calendar {
+    margin-right: 8px;
+    margin-bottom: initial;
+    @media(max-width:768px){
+        margin-right: initial;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    input {
+        &.form-control {
+            width: 200px;
+            height: 40px;
+            @media(max-width:768px){
+                width: 100%;
+            }
+        }
+    }
+}
+.datapicker-vacations {
+    .form-group {
+        .input-group {
+            input {
+                display: none;
+                margin-right: 16px;
+            }
+        }
+    }
+    form {
+        .form-inline {
+            .form-group {
+                .input-group {
+                    .form-control {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+    display: none;
+}
+.input-group>.form-control:focus, .input-group>.form-select:focus {
+    display: none;
+}
+.input-group>.form-control, .input-group>.form-select {
+    display: none;
+}
+::ng-deep ng-template {
+    z-index: 1000;
+    padding: 24px 16px;
+}
+::ng-deep ngb-datepicker {
+    background-color: $white;
+    border: 0;
+    -webkit-box-shadow: 2px 2px 15px 0px rgb(0 0 0 / 44%);
+    box-shadow: 2px 2px 15px 0px rgb(0 0 0 / 44%);
+    padding: 24px 16px;
+    z-index: 100;
+}
+.custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+}
+.custom-day.focused {
+    background-color: #e6e6e6;
+}
+.custom-day.range, .custom-day:hover {
+    background-color: rgb(2, 117, 216);
+    color: white;
+}
+.custom-day.faded {
+    background-color: rgba(2, 117, 216, 0.5);
+}
