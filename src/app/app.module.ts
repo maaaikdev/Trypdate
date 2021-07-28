@@ -13,6 +13,7 @@ import { CalendarComponent } from './shared/calendar/calendar.component';
 import { GuestsComponent } from './shared/guests/guests.component';
 import { LocationComponent } from './shared/location/location.component';
 import { AgmCoreModule } from '@agm/core';
+import { DetailPropertiesComponent } from './pages/detail-properties/detail-properties.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AgmCoreModule } from '@agm/core';
     PropertiesListComponent,
     CalendarComponent,
     GuestsComponent,
-    LocationComponent,    
+    LocationComponent,
+    DetailPropertiesComponent,    
   ],
   imports: [
     BrowserModule,
