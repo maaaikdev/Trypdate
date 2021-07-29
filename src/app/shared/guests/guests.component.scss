@@ -27,10 +27,11 @@
     padding: 8px 24px;
     border-radius: 8px;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 50px;
     -webkit-box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.44); 
     box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.44);
+    z-index: 1;
     .handle-counter {
         display: flex;
         flex-direction: row;
