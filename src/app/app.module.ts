@@ -14,8 +14,9 @@ import { GuestsComponent } from './shared/guests/guests.component';
 import { LocationComponent } from './shared/location/location.component';
 import { AgmCoreModule } from '@agm/core';
 import { DetailPropertiesComponent } from './pages/detail-properties/detail-properties.component';
-import { PropertyReservationComponent } from './pages/property-reservation/property-reservation.component';
 import { PricesComponent } from './shared/prices/prices.component';
+import { PropertyReservationComponent } from './pages/property-reservation/property-reservation.component';
+
 
 @NgModule({
   declarations: [
@@ -29,8 +30,8 @@ import { PricesComponent } from './shared/prices/prices.component';
     GuestsComponent,
     LocationComponent,
     DetailPropertiesComponent,
-    PropertyReservationComponent,
-    PricesComponent,    
+    PricesComponent,
+    PropertyReservationComponent
   ],
   imports: [
     BrowserModule,

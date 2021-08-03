@@ -1,0 +1,66 @@
+@import '../../../../styles.scss';
+.progressbar-all {
+    display: flex;
+    align-items: center;
+    margin: 24px auto 16px;
+    padding-right: 74px;
+    @media(max-width:768px){
+        margin: 8px auto 8px;
+        padding: 16px 24px 16px 16px;
+    }
+    img {
+        flex: 1 1 5%;
+        height: 32px;
+        margin-right: 16px;
+        @media(max-width:768px){
+            height: 42px;
+        }
+    }
+    .bar-progress {
+        flex: 1 1 95%;
+        p {
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 400;
+            color: $gray-scale-3;
+            margin-bottom: 4px;
+        }
+        .progress {            
+            height: 8px;
+            .progress-bar {
+                background-color: $success;
+                height: 16px;
+                &.prog-10 {
+                    width: 10%;
+                }
+                &.prog-20 {
+                    width: 20%;
+                }
+                &.prog-30 {
+                    width: 30%;
+                }
+                &.prog-40 {
+                    width: 40%;
+                }
+                &.prog-50 {
+                    width: 50%;
+                }
+                &.prog-60 {
+                    width: 60%;
+                }
+                &.prog-70 {
+                    width: 70%;
+                }
+                &.prog-80 {
+                    width: 80%;
+                }
+                &.prog-90 {
+                    width: 90%;
+                }
+                &.prog-100 {
+                    width: 100%;
+                }
+            }        
+        }
+    }    
+}

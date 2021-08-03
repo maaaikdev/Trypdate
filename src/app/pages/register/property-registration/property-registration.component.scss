@@ -1,0 +1,302 @@
+@import '../../../../styles.scss';
+.registration {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    @media(max-width:768px){
+        flex-direction: column;
+    }
+    .left {
+        flex: 1 1 55%;
+        margin-right: 5%;
+        @media(max-width:768px){
+            width: 100%;
+        }
+        .box-step {
+            width: 100%;
+            border-radius: 6px;
+            -webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.15); 
+            box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.15);
+            padding: 24px 32px;
+            @media(max-width:768px){
+                margin-bottom: 32px;
+            }
+            h2 {
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 600;
+                color: $gray-scale-1;
+                margin-bottom: 16px;
+            }
+            .form-check {
+                .form-check-input {
+                    margin-right: 12px;
+                    transform: scale(1.1);
+                }
+                .form-check-label {
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    color: $gray-scale-3;
+                }
+            }
+            .box-calendar {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 16px auto;
+                label {
+                    flex: 1 1 50%;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    color: $gray-scale-1;
+                    margin-bottom: 0;
+                }
+                .input-group {
+                    flex: 1 1 50%;
+                    margin-left: auto;
+                }
+            }
+            .box-price {
+                display: flex;
+                flex-direction: row;
+                .form-control {
+                    flex: 1 1 70%;
+                    margin-right: 16px;
+                }
+                .form-select {
+                    flex: 1 1 30%;
+                }
+            }
+            hr {
+                margin: 32px auto 32px;
+                border: 1px solid $gray-scale-4;
+            }
+            h3 {
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 600;
+                color: $gray-scale-1;
+                margin-bottom: 16px;
+            }
+            //IMAGE UPLOAD           
+            
+            ::ng-deep .imgUp {
+                margin-bottom:24px;
+                position: relative;
+                .imagePreview {
+                    width: 100%;
+                    height: 150px;
+                    background-position: center center;
+                    background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+                    background-color:#fff;
+                    background-size: cover;
+                    background-repeat:no-repeat;
+                    display: inline-block;      
+                    @media(max-width:768px){
+                        height:220px;
+                    }        
+                }
+                .btn-primary {
+                    width: 100%;
+                    display:block;
+                    border-radius:0px;
+                    margin-top:-5px;
+                }
+                .del {
+                    position:absolute;
+                    top:0px;
+                    right:15px;
+                    width:30px;
+                    height:30px;
+                    text-align:center;
+                    line-height:30px;
+                    background-color:transparent;
+                    cursor:pointer;
+                }
+            }
+            .imgAdd {
+                width:30px;
+                height:30px;
+                border-radius:50%;
+                background-color:#4bd7ef;
+                color:#fff;
+                //box-shadow:0px 0px 2px 1px rgba(0,0,0,0.2);
+                text-align:center;
+                line-height:30px;
+                margin-top:0px;
+                cursor:pointer;
+                font-size:15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media(max-width:768px){
+                    width:40px;
+                    height:40px;
+                    margin: 8px auto 24px;
+                }
+            }            
+            //IMAGE UPLOAD
+            p {
+                &.paragraph {
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    color: $gray-scale-2;
+                    margin-bottom: 8px;
+                    a {
+                        color: $success;
+                    }
+                }
+            }
+            .handle-counter {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 16px auto;
+                .left {
+                    text-align: left;
+                    p {
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 400;
+                        color: $gray-scale-1;
+                        margin-bottom: 0;
+                    }
+                }
+                .right {
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: auto;
+                    justify-content: flex-end;
+                    .counter-minus {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 0;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .number-pass {
+                        width: 50px;
+                        height: 32px;
+                        border-radius: 0;
+                        border: 0;
+                        text-align: center;
+                    }
+                    .counter-plus {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 0;
+                        display: flex;
+                        align-items: center;
+                    }
+                }  
+                
+            }
+            .maps {
+                margin: 16px auto;
+            }
+            .cta-action {
+                display: flex;
+                flex-direction: row;
+                @media(max-width:768px){
+                    flex-direction: column-reverse;
+                }
+                .cta-back {
+                    flex: 1 1 48%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 16px;
+                    color: $success;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 600;
+                    background-color: $white;
+                    border: 1px solid $success;
+                    //border: none;
+                    border-radius: 6px;
+                    margin: 24px auto 0;
+                    position: relative;
+                    @media(max-width:768px){
+                        width: 100%;
+                        border: none;
+                        text-decoration: underline;
+                        padding: 8px 16px;
+                        font-weight: 400;
+                    }
+                    &:hover {
+                        background-color: rgba($color: $success, $alpha: .2);
+                    }
+                    .fa-chevron-left {
+                        position: absolute;
+                        font-size: 16px;
+                        left: 24px;
+                        @media(max-width:768px){
+                            display: none;
+                        }
+                    }
+                }
+                .cta-checkout {
+                    flex: 1 1 48%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 16px;
+                    color: $white;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 600;
+                    background-color: $success;
+                    border: none;
+                    border-radius: 6px;
+                    margin: 24px auto 0;
+                    position: relative;
+                    @media(max-width:768px){
+                        width: 100%;
+                    }
+                    &:hover {
+                        opacity: .6;
+                    }
+                    .fa-chevron-right {
+                        position: absolute;
+                        font-size: 16px;
+                        right: 24px;
+                    }
+                }
+            }
+            .cta-checkout {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding: 16px;
+                color: $white;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 600;
+                background-color: $success;
+                border: none;
+                border-radius: 6px;
+                margin: 24px auto 0;
+                &:hover {
+                    opacity: .6;
+                }                
+            }
+        }
+    }
+    .right {
+        flex: 1 1 40%;
+        @media(max-width:768px){
+            width: 100%;
+        }
+        .box-step {
+            width: 100%;
+            border-radius: 6px;
+            -webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.15); 
+            box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.15);
+            padding: 24px 32px;
+            margin-bottom: 24px;
+        }
+    }
+}

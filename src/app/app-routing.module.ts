@@ -10,7 +10,11 @@ import { PropertyReservationComponent } from './pages/property-reservation/prope
 		{ path: '', component: HomeComponent  },
 		{ path: 'listado-propiedades', component: PropertiesListComponent },
 		{ path: 'detalle-propiedad', component: DetailPropertiesComponent },
-		{ path: 'reserva-propiedad', component: PropertyReservationComponent }
+		{ path: 'reserva-propiedad', component: PropertyReservationComponent },
+		{ 
+			path: 'private',
+			loadChildren: './pages/register/register.module#RegisterModule'
+		}
 	];
 
 	@NgModule({
