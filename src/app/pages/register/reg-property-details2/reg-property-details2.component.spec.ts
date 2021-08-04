@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { RegPropertyDetails2Component } from './reg-property-details2.component';
 
@@ -6,7 +6,7 @@ describe('RegPropertyDetails2Component', () => {
   let component: RegPropertyDetails2Component;
   let fixture: ComponentFixture<RegPropertyDetails2Component>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ RegPropertyDetails2Component ]
     })

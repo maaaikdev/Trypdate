@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { RegAddPhotosComponent } from './reg-add-photos.component';
 
@@ -6,7 +6,7 @@ describe('RegAddPhotosComponent', () => {
   let component: RegAddPhotosComponent;
   let fixture: ComponentFixture<RegAddPhotosComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ RegAddPhotosComponent ]
     })

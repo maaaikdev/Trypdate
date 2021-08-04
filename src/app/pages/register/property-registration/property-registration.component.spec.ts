@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PropertyRegistrationComponent } from './property-registration.component';
 
@@ -6,7 +6,7 @@ describe('PropertyRegistrationComponent', () => {
   let component: PropertyRegistrationComponent;
   let fixture: ComponentFixture<PropertyRegistrationComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PropertyRegistrationComponent ]
     })
