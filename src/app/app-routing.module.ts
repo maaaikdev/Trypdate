@@ -13,7 +13,7 @@ import { PropertyReservationComponent } from './pages/property-reservation/prope
 		{ path: 'reserva-propiedad', component: PropertyReservationComponent },
 		{ 
 			path: 'private',
-			loadChildren: './pages/register/register.module#RegisterModule'
+			loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule)
 		}
 	];
 
