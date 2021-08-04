@@ -38,87 +38,100 @@
                     }
                 }
             }
-            .properties {
-                display: flex;
-                flex-direction: row;
-                margin: 8px auto;
-                border: 1px solid $gray-scale-8;
-                border-radius: 8px;
+            .property-lists-scroll {
+                height: 68vh;
+                overflow: hidden;
+                overflow-y: scroll;
                 @media(max-width:768px){
-                    flex-direction: column;
+                    height: initial;
+                    overflow: initial;
+                    overflow-y: initial;
                 }
-                .carusel-img {
-                    flex: 1 1 45%;
-                    width: 45%;
+                @media(min-width:1720px){
+                    height: 76vh;
+                }
+                .properties {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 8px auto;
+                    border: 1px solid $gray-scale-8;
+                    border-radius: 8px;
                     @media(max-width:768px){
-                        width: 100%;
+                        flex-direction: column;
                     }
-                    ::ng-deep ngb-carousel {
-                        .carousel-inner {
-                            height: 220px;
-                            .carousel-item {
-                                .picsum-img-wrapper {
-                                    img {
-                                        width: 166%;
+                    .carusel-img {
+                        flex: 1 1 45%;
+                        width: 45%;
+                        @media(max-width:768px){
+                            width: 100%;
+                        }
+                        ::ng-deep ngb-carousel {
+                            .carousel-inner {
+                                height: 220px;
+                                .carousel-item {
+                                    .picsum-img-wrapper {
+                                        img {
+                                            width: 166%;
+                                        }
+                                    }
+                                }
+                            }
+                            .carousel-control-prev {
+                                .sr-only {
+                                    display: none;
+                                }
+                            }
+                            .carousel-control-next {
+                                .sr-only {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    .description {
+                        flex: 1 1 55%;
+                        width: 55%;
+                        background-color: $white;
+                        padding: 24px;
+                        @media(max-width:768px){
+                            width: 100%;
+                        }
+                        h3 {
+                            font-size: 16px;
+                            line-height: 24px;
+                            font-weight: 300;
+                            text-transform: uppercase;
+                            color: $primary-1;
+                        }
+                        p {
+                            font-size: 16px;
+                            line-height: 24px;
+                            font-weight: 400;
+                            color: $primary-1;
+                            &.location {
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: $gray-scale-3;
+                            }
+                            &.price {
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: $gray-scale-3;
+                                margin-top: 8px;
+                                margin-bottom: 0;
+                                span {
+                                    font-size: 24px;
+                                    line-height: 30px;
+                                    color: $gray-scale-1;
+                                    small {
+                                        font-size: 18px;
                                     }
                                 }
                             }
                         }
-                        .carousel-control-prev {
-                            .sr-only {
-                                display: none;
-                            }
-                        }
-                        .carousel-control-next {
-                            .sr-only {
-                                display: none;
-                            }
-                        }
                     }
                 }
-                .description {
-                    flex: 1 1 55%;
-                    width: 55%;
-                    background-color: $white;
-                    padding: 24px;
-                    @media(max-width:768px){
-                        width: 100%;
-                    }
-                    h3 {
-                        font-size: 16px;
-                        line-height: 24px;
-                        font-weight: 300;
-                        text-transform: uppercase;
-                        color: $primary-1;
-                    }
-                    p {
-                        font-size: 16px;
-                        line-height: 24px;
-                        font-weight: 400;
-                        color: $primary-1;
-                        &.location {
-                            font-size: 14px;
-                            line-height: 20px;
-                            color: $gray-scale-3;
-                        }
-                        &.price {
-                            font-size: 14px;
-                            line-height: 20px;
-                            color: $gray-scale-3;
-                            margin-top: 8px;
-                            margin-bottom: 0;
-                            span {
-                                font-size: 24px;
-                                line-height: 30px;
-                                color: $gray-scale-1;
-                                small {
-                                    font-size: 18px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            }            
         }
         .maps {
             flex: 1 1 50%;

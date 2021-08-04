@@ -47,6 +47,22 @@ export class PropertiesListComponent implements OnInit {
 			description: 'Romantic Tented Cabin Rental for a Santa Elena Getaway in Colombia',
 			location: 'Rionegro, Antioquia (Colombia)',
 			price: '350.000'
+		},
+		{
+			id: 3,
+			images: 'assets/images/home/glamping.jpg',
+			title: 'Cabañas de lona',
+			description: 'Romantic Tented Cabin Rental for a Santa Elena Getaway in Colombia',
+			location: 'Rionegro, Antioquia (Colombia)',
+			price: '350.000'
+		},
+		{
+			id: 3,
+			images: 'assets/images/home/glamping.jpg',
+			title: 'Cabañas de lona',
+			description: 'Romantic Tented Cabin Rental for a Santa Elena Getaway in Colombia',
+			location: 'Rionegro, Antioquia (Colombia)',
+			price: '350.000'
 		}
 	]
 

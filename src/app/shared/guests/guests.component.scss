@@ -27,7 +27,7 @@
     padding: 8px 24px;
     border-radius: 8px;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 50px;
     -webkit-box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.44); 
     box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.44);
@@ -72,7 +72,75 @@
                 display: flex;
                 align-items: center;
             }
-        }  
-        
+        }        
+    }
+    .cta-action {
+        display: flex;
+        flex-direction: row;
+        @media(max-width:768px){
+            flex-direction: column-reverse;
+        }
+        .cta-back {
+            flex: 1 1 49%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 16px;
+            color: $success;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            background-color: $white;
+            border: 1px solid $success;
+            //border: none;
+            border-radius: 6px;
+            margin: 8px auto 16px;
+            position: relative;
+            @media(max-width:768px){
+                width: 100%;
+                border: none;
+                text-decoration: underline;
+                padding: 8px 16px;
+                font-weight: 400;
+            }
+            &:hover {
+                background-color: rgba($color: $success, $alpha: .2);
+            }
+            .fa-chevron-left {
+                position: absolute;
+                font-size: 16px;
+                left: 24px;
+                @media(max-width:768px){
+                    display: none;
+                }
+            }
+        }
+        .cta-checkout {
+            flex: 1 1 49%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 16px;
+            color: $white;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            background-color: $success;
+            border: none;
+            border-radius: 6px;
+            margin: 8px auto 16px;
+            position: relative;
+            @media(max-width:768px){
+                width: 100%;
+            }
+            &:hover {
+                opacity: .6;
+            }
+            .fa-chevron-right {
+                position: absolute;
+                font-size: 16px;
+                right: 24px;
+            }
+        }
     }
 }

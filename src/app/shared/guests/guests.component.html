@@ -1,5 +1,5 @@
 <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle drop-passengers" type="button" title="Huespedes" (click)="openCounter()">
+    <button class="btn btn-secondary dropdown-toggle drop-passengers" type="button" title="Huespedes" (click)="openCounter()" >
         2 huespedes
     </button>
     <div class="counter-passengers" id="handleCounter">
@@ -34,6 +34,14 @@
                 <input type="text" value="3" class="number-pass">
                 <button class="counter-plus btn btn-primary">+</button>
             </div>                        
-        </div>    
+        </div>
+        <div class="cta-action">
+            <button class="cta-back me-4" routerLink="/private/caracteristicas-y-servicios">
+                Restablecer
+            </button>
+            <button class="cta-checkout" routerLink="/private/adicionar-fotos">
+                Aplicar
+            </button>
+        </div>
     </div>
 </div>

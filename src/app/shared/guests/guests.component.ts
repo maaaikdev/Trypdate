@@ -17,5 +17,4 @@ export class GuestsComponent implements OnInit {
 	openCounter(){
 		$('#handleCounter').toggleClass('d-block');
 	}
-
 }

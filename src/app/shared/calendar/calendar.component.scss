@@ -18,6 +18,18 @@
             }
         }
     }
+    .input-group {
+        input {
+            &.form-control {
+                width: 200px;
+                height: 40px;
+                @media(max-width:768px){
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
 }
 .datapicker-vacations {
     .form-group {
@@ -60,6 +72,12 @@
     box-shadow: 2px 2px 15px 0px rgb(0 0 0 / 44%);
     padding: 24px 16px;
     z-index: 100;
+    position: absolute;
+    top: 10px!important;
+    right: 0px!important;
+    left: initial!important;
+    will-change: initial!important;
+    transform: initial!important;
 }
 .custom-day {
     text-align: center;

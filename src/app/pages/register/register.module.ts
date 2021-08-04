@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegConfigPriceComponent } from './reg-config-price/reg-config-price.component';
 import { RegCancellationComponent } from './reg-cancellation/reg-cancellation.component';
+import { AgmCoreModule } from '@agm/core';
 
 
 
@@ -36,7 +37,11 @@ import { RegCancellationComponent } from './reg-cancellation/reg-cancellation.co
   imports: [
     CommonModule,
     RegisterRoutingModule,
-    FormsModule, NgbModule
+    FormsModule, 
+    NgbModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
+    })
   ]
 })
 export class RegisterModule { }

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+//import { $ } from 'protractor';
+
+declare var $:any;
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
+
+	@HostListener("window:scroll", ['$event'])
+	onScroll(event) {
+		// if (event.srcElement.scrollTop == 0) {
+		// 	console.log("Scroll 0")
+		// } else {
+		// 	console.log("Scroll active")
+		// }
+		if (window.pageYOffset == 0) {
+			console.log("Scroll 0")
+			//$(".detail-properties").addClass("detail-fixed");
+			$("#navFIxedTop").removeClass("fixed-scroll");
+		} else {
+			console.log("Scroll active")
+			$("#navFIxedTop").addClass("fixed-scroll");
+			//$(".detail-properties").removeClass("detail-fixed")
+		}
+	}
 
 }
