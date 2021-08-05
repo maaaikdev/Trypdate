@@ -7,17 +7,45 @@
         font-weight: 500;
         color: $gray-scale-1;
         margin-bottom: 24px;
+        @media(max-width:768px){
+            width: 92%;
+            margin: 0 auto 24px;
+        }
     }
     .card-item {
         display: flex;
         flex-direction: row;
-        z-index: -1;
+        z-index: 0;
+        position: relative;
+        @media(max-width:768px){
+            padding: 0 24px;
+        }        
         .card {
             cursor: pointer;
             margin-bottom: 40px;
             &:hover {
                 -webkit-box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.25); 
                 box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.25);
+            }
+            .btn-favorites {
+                position: absolute;
+                top: 12px;
+                right: 12px;                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $black;
+                border: 0;
+                border-radius: 100%;
+                width: 36px;
+                height: 36px;
+                i {
+                    font-size: 18px;
+                    color: $white;
+                }
+                &:hover {
+                    opacity: .8;
+                }
             }
             .card-body {
                 display: flex;
@@ -87,11 +115,8 @@
             margin: 0 auto 24px;
             position: relative;
             @media(max-width:768px){
-                width: 100%;
-                border: none;
-                text-decoration: underline;
-                padding: 8px 16px;
-                font-weight: 400;
+                width: 90%;
+                margin: 0 auto;               
             }
             &:hover {
                 background-color: rgba($color: $success, $alpha: .2);

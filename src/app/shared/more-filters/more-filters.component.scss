@@ -6,16 +6,10 @@
     background-color: $white;
     border: 1px solid $gray-scale-8;
     height: 40px;
-    margin-right: 16px;
+    margin-right: 10px;
 }
 .modal {
     .modal-dialog {
-        &.modal-price {
-            max-width: 360px;
-            @media(max-width:768px){
-                margin:0;
-            }
-        }
         .modal-content {
             .modal-header {
 
@@ -28,10 +22,6 @@
                         font-weight: 600;
                         color: $gray-scale-1;
                         margin-bottom: 16px;
-                        &.title {
-                            font-size: 20px;
-                            line-height: 24px;
-                        }
                     }
                     .form-check {
                         display: flex;

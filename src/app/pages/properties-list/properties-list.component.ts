@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 //import { Place } from '../model/place.model';
 
+declare var $: any;
+
 interface Place {
     name: string;
     lat: number;
@@ -22,6 +24,10 @@ export class PropertiesListComponent implements OnInit {
 	lat!: number;
 	long!: number;
 	zoom: number = 15;
+	propertiesComp = true;
+	mapsComp = true;
+	btnMap = false;
+	btnProperty = false;
 
 	accommodation = [
 		{
@@ -77,6 +83,15 @@ export class PropertiesListComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		if($(window).width() >= 768){
+			this.propertiesComp = true;
+			this.mapsComp = true;
+		} else {
+			this.propertiesComp = true;
+			this.mapsComp = false;
+			this.btnMap = true;
+			this.btnProperty = false;
+		}
 		this.setCurrentLocation();
 		this.places.push(
 			{
@@ -99,6 +114,29 @@ export class PropertiesListComponent implements OnInit {
 			// this.getAddress(this.lat, this.long);
 		  });
 		}
+	}
+	propertyClick() {
+		this.propertiesComp = true;
+		this.mapsComp = false;
+		this.btnMap = true;
+		this.btnProperty = false;
+	}
+	mapsClick() {
+		this.propertiesComp = false;
+		this.mapsComp = true;
+		this.btnMap = false;
+		this.btnProperty = true;
+		this.places.push(
+			{
+				lat: 9.711783,
+				long: -75.119353,
+				id: "1",
+				name: "HoteLucho",
+				visited: false
+			}
+
+		);
+		console.log(this.places)
 	}
 
 }

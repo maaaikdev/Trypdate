@@ -1,0 +1,52 @@
+<button type="button" class="btn btn-modal-filter" data-bs-toggle="modal" data-bs-target="#typeProperty">
+   Tipos de propiedades
+</button>
+<!-- Modal -->
+<div class="modal fade" id="typeProperty" tabindex="-1" aria-labelledby="typePropertyLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm modal-price">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="typePropertyLabel">Tipos de propiedades</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-check mt-3">
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Casas vacacionales
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> 
+                    </div>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Cabañas
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"> 
+                    </div>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Glamping
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> 
+                    </div>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Casa rural
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"> 
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="cta-action">
+                    <button class="cta-back me-4" routerLink="/private/disponibilidad-propiedad">
+                        Restablecer
+                    </button>
+                    <button class="cta-checkout" routerLink="/private/politicas-cancelacion">
+                        Aplicar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

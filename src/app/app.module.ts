@@ -16,6 +16,10 @@ import { AgmCoreModule } from '@agm/core';
 import { DetailPropertiesComponent } from './pages/detail-properties/detail-properties.component';
 import { PricesComponent } from './shared/prices/prices.component';
 import { PropertyReservationComponent } from './pages/property-reservation/property-reservation.component';
+import { TypePropertyComponent } from './shared/type-property/type-property.component';
+import { PriceComponent } from './shared/price/price.component';
+import { MoreFiltersComponent } from './shared/more-filters/more-filters.component';
+import { FiltersComponent } from './shared/filters/filters.component';
 
 
 @NgModule({
@@ -31,7 +35,11 @@ import { PropertyReservationComponent } from './pages/property-reservation/prope
     LocationComponent,
     DetailPropertiesComponent,
     PricesComponent,
-    PropertyReservationComponent
+    PropertyReservationComponent,
+    TypePropertyComponent,
+    PriceComponent,
+    MoreFiltersComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,

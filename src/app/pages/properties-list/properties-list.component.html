@@ -1,18 +1,45 @@
 <section class="properties-list">
     <div class="content-properties">
-        <div class="form-properties">
+        <div class="form-properties scrollspy-example" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
             <div class="header">
                 <app-location></app-location>
                 <app-calendar></app-calendar>
                 <app-guests></app-guests>
             </div>
             <div class="component-filters">
-                <app-prices></app-prices>
+                <app-type-property class="d-none d-md-block"></app-type-property>
+                <app-prices class="d-none d-md-block"></app-prices>
+                <app-more-filters class="d-none d-md-block"></app-more-filters>
+                <app-filters class="d-block d-md-none"></app-filters>
+                <button class="btn-maps d-block d-md-none" (click)="mapsClick()" *ngIf="btnMap">
+                    <i class="fa fa-map" aria-hidden="true"></i>
+                    Mapa
+                </button>
+                <button class="btn-maps d-block d-md-none" (click)="propertyClick()" *ngIf="btnProperty">
+                    <i class="fa fa-th-list" aria-hidden="true"></i>
+                    Listado
+                </button>
             </div>
-            <div class="acommodations">
+            <div class="acommodations" *ngIf="propertiesComp">
                 <p>Tenemos los siguientes resultados para <span>Bogotá</span> - 33</p>
+                <div class="order-filter">
+                    <p class="d-none d-md-block">Ordenar por</p>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle btn-order d-none d-md-block" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recomendado
+                        </button>
+                        <button class="btn-order icon-btn d-block d-md-none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-filter" aria-hidden="true"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Del precio más alto al más bajo</a></li>
+                            <li><a class="dropdown-item" href="#">Del precio más bajo al más alto</a></li>
+                            <li><a class="dropdown-item" href="#">Más valorado</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="property-lists-scroll">
+            <div class="property-lists-scroll" *ngIf="propertiesComp">
                 <div class="properties" *ngFor="let item of accommodation">
                     <div class="carusel-img">
                         <ngb-carousel *ngIf="images">
@@ -56,7 +83,7 @@
                 </div>
             </div>            
         </div>
-        <div class="maps">
+        <div class="maps" *ngIf="mapsComp">
             <div class="places">
                 <div class="map">
                     <agm-map [latitude]="lat" [longitude]="long" [zoom]="zoom">

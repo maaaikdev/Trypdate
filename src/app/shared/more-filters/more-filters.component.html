@@ -1,0 +1,107 @@
+<button type="button" class="btn btn-modal-filter" data-bs-toggle="modal" data-bs-target="#moreFilters">
+    Más filtros
+</button>
+<!-- Modal -->
+<div class="modal fade" id="moreFilters" tabindex="-1" aria-labelledby="moreFiltersLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm modal-price">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="moreFiltersLabel">Más filtros</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <h3>Cancelación gratuita</h3>
+                    <div class="form-check mt-3">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Mostrar propiedades con cancelación gratuita
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> 
+                    </div>
+                    <h3 class="mt-3">Servicios</h3>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Piscina
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"> 
+                    </div>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Internet
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> 
+                    </div>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Televisión
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"> 
+                    </div>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Mascotas
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> 
+                    </div>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Parqueadero
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" > 
+                    </div>
+                    <h3 class="mt-3">Distancia</h3>
+                    <div class="mb-3">
+                        <input type="range" class="form-range" id="customRange1">
+                    </div>
+                    <h3 class="mt-3">Calificación</h3>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            5.0
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"> 
+                    </div>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            4.5
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> 
+                    </div>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            4.0
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"> 
+                    </div>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            3.5
+                        </label>   
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> 
+                    </div>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            3.0
+                        </label> 
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" > 
+                    </div>
+                    <div class="form-check mt-2">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Propiedades sin calificación
+                        </label> 
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" > 
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="cta-action">
+                    <button class="cta-back me-4" routerLink="/private/disponibilidad-propiedad">
+                        Restablecer
+                    </button>
+                    <button class="cta-checkout" routerLink="/private/politicas-cancelacion">
+                        Aplicar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
