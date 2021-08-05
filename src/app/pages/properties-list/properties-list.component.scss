@@ -115,8 +115,29 @@
                     border: 1px solid $gray-scale-8;
                     border-radius: 0;
                     overflow: hidden;
+                    position: relative;
                     @media(max-width:768px){
                         flex-direction: column;                        
+                    }
+                    .btn-favorites {
+                        position: absolute;
+                        top: 12px;
+                        right: 12px;                
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $black;
+                        border: 0;
+                        border-radius: 100%;
+                        width: 36px;
+                        height: 36px;
+                        i {
+                            font-size: 18px;
+                            color: $white;
+                        }
+                        &:hover {
+                            opacity: .8;
+                        }
                     }
                     .carusel-img {
                         flex: 1 1 45%;
@@ -125,6 +146,27 @@
                             width: 100%;
                         }
                         ::ng-deep ngb-carousel {
+                            .btn-favorites {
+                                position: absolute;
+                                top: 12px;
+                                right: 12px;                
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: $black;
+                                border: 0;
+                                border-radius: 100%;
+                                width: 36px;
+                                height: 36px;
+                                z-index: 100;
+                                i {
+                                    font-size: 18px;
+                                    color: $white;
+                                }
+                                &:hover {
+                                    opacity: .8;
+                                }
+                            }
                             .carousel-inner {
                                 height: 220px;
                                 .carousel-item {
@@ -202,4 +244,8 @@
             }
         }
     }
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
