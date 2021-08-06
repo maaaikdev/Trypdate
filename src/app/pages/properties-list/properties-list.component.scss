@@ -99,11 +99,13 @@
                 }
             }
             .property-lists-scroll {
+                margin: 0 24px;
                 @media(max-width:768px){
                     height: initial;
                     overflow: initial;
                     overflow-y: initial;
                     padding: 0 24px;
+                    margin: 0;
                 }
                 @media(min-width:1720px){
                     height: 76vh;
